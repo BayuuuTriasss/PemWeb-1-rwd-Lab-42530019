@@ -160,3 +160,148 @@ body {
     box-shadow: var(--shadow-md);
     object-fit: cover;
 }
+
+/* Katalog Section */
+.catalog-section {
+    padding-block: var(--space-2xl);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: var(--space-xl);
+}
+
+.section-header__title {
+    font-size: var(--fs-600);
+    color: var(--clr-primary-900);
+    margin-bottom: var(--space-xs);
+}
+
+.section-header__subtitle {
+    color: var(--clr-neutral-600);
+    font-size: var(--fs-400);
+}
+
+/* 2D Fluid CSS Grid Container */
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: var(--space-lg);
+}
+
+/* Card Component: Perpaduan Grid Luar & Flexbox Dalam */
+.product-card {
+    background-color: var(--clr-neutral-100);
+    border: 1px solid var(--clr-neutral-300);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-default), box-shadow var(--transition-default);
+    min-width: 0; /* Menambahkan untuk masalah overflow pada konten */
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.product-card__media {
+    position: relative;
+    aspect-ratio: 16 / 10;
+}
+
+.product-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-card__badge {
+    position: absolute;
+    top: var(--space-xs);
+    right: var(--space-xs);
+    background-color: var(--clr-primary-900);
+    color: var(--clr-neutral-100);
+    font-size: var(--fs-300);
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.product-card__body {
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* Mendorong footer kartu selalu seragam di baris terbawah */
+}
+
+.product-card__title {
+    font-size: var(--fs-500);
+    color: var(--clr-primary-900);
+    margin-bottom: var(--space-xs);
+}
+
+.product-card__text {
+    font-size: var(--fs-300);
+    color: var(--clr-neutral-600);
+    margin-bottom: var(--space-md);
+    flex-grow: 1;
+    overflow-wrap: anywhere; /* Ditambahkan untuk teks tidak keluar dari kartu */
+}
+
+.product-card__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--clr-neutral-300);
+    padding-top: var(--space-sm);
+    font-size: var(--fs-300);
+}
+
+.product-card__tech {
+    font-weight: 600;
+    color: var(--clr-accent-600);
+}
+
+.action-link {
+    color: var(--clr-primary-900);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Section */
+.site-footer {
+    background-color: var(--clr-primary-900);
+    color: var(--clr-neutral-300);
+    padding-block: var(--space-xl);
+    font-size: var(--fs-300);
+}
+
+.site-footer__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    text-align: center;
+}
+
+.site-footer__links {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.site-footer__link {
+    color: var(--clr-neutral-300);
+    text-decoration: none;
+}
+
+.site-footer__link:hover {
+    color: var(--clr-neutral-100);
+}
