@@ -305,3 +305,47 @@ body {
 .site-footer__link:hover {
     color: var(--clr-neutral-100);
 }
+
+/* Breakpoint 1: Perangkat Tablet (min-width: 768px) */
+@media (min-width: 768px) {
+    .site-header__wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .primary-nav__link {
+        font-size: var(--fs-400);
+    }
+
+    .hero-section__actions {
+        flex-direction: row;
+    }
+
+    .site-footer__wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+}
+
+/* Breakpoint 2: Layar Desktop / Workstation (min-width: 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        padding-inline: var(--space-xl);
+    }
+
+    .hero-section {
+        padding-block: 5rem;
+    }
+}
+
+.hero-section__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: var(--space-2xl);
+}
+
+.hero-section__title {
+    font-size: var(--fs-800);
+}
